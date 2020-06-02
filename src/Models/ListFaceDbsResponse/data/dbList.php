@@ -1,7 +1,7 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\ListFaceDbsResponse\data;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceDbsResponse\data;
 
 use AlibabaCloud\Tea\Model;
 

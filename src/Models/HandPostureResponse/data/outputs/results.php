@@ -1,12 +1,12 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\HandPostureResponse\data\outputs;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureResponse\data\outputs;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\results\box;
-use AlibabaCloud\SDK\facebody\V20191230\Models\results\hands;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureResponse\data\outputs\results\box;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureResponse\data\outputs\results\hands;
 
 class results extends Model {
     protected $_name = [
@@ -39,13 +39,13 @@ class results extends Model {
     }
     /**
      * @description box
-     * @var results.box
+     * @var box
      */
     public $box;
 
     /**
      * @description hands
-     * @var results.hands
+     * @var hands
      */
     public $hands;
 

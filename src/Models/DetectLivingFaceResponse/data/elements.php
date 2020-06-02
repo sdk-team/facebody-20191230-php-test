@@ -1,11 +1,11 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\DetectLivingFaceResponse\data;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\DetectLivingFaceResponse\data;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\DetectLivingFaceResponse\data\elements\results;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectLivingFaceResponse\data\elements\results;
 
 class elements extends Model {
     protected $_name = [

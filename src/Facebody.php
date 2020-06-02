@@ -1,1349 +1,1476 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-
 namespace AlibabaCloud\SDK\Facebody\V20191230;
 
-use AlibabaCloud\Endpoint\Endpoint;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\AddFaceAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\AddFaceEntityRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\AddFaceEntityResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\AddFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\AddFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\BodyPostureAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\BodyPostureRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\BodyPostureResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\CompareFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\CompareFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\CreateFaceDbRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\CreateFaceDbResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceDbRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceDbResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceEntityRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceEntityResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DeleteFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectBodyCountAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectBodyCountRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectBodyCountResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectFaceAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectLivingFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectLivingFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectMaskAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectMaskRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectMaskResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectPedestrianAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectPedestrianRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\DetectPedestrianResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\EnhanceFaceAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\EnhanceFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\EnhanceFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceBeautyAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceBeautyRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceBeautyResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceFilterAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceFilterRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceFilterResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceMakeupAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceMakeupRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceMakeupResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceTidyupAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceTidyupRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\FaceTidyupResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\GetFaceEntityRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\GetFaceEntityResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\HandPostureAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\HandPostureRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\HandPostureResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\ListFaceDbsRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\ListFaceDbsResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\ListFaceEntitiesRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\ListFaceEntitiesResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeExpressionAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeExpressionRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeExpressionResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeFaceAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizeFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizePublicFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\RecognizePublicFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\SearchFaceAdvanceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\SearchFaceRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\SearchFaceResponse;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\UpdateFaceEntityRequest;
-use AlibabaCloud\SDK\Facebody\V20191230\Facebody\UpdateFaceEntityResponse;
-use AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform;
-use AlibabaCloud\SDK\OSS\OSS;
-use AlibabaCloud\Tea\Model;
-use AlibabaCloud\Tea\Request;
-use AlibabaCloud\Tea\RpcUtils\RpcUtils;
+use AlibabaCloud\Tea\Rpc\Rpc;
 use AlibabaCloud\Tea\Utils\Utils;
-use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+use AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform;
+use AlibabaCloud\Tea\RpcUtils\RpcUtils;
+use AlibabaCloud\SDK\OSS\OSS;
+use AlibabaCloud\Endpoint\Endpoint;
 
-class Facebody
-{
-    public function __construct($config)
-    {
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectVideoLivingFaceRequest;
+use AlibabaCloud\Tea\Utils\Utils\RuntimeOptions;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectVideoLivingFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectVideoLivingFaceAdvanceRequest;
+use AlibabaCloud\Tea\Rpc\Rpc\Config;
+use AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest;
+use AlibabaCloud\Tea\FileForm\FileForm\FileField;
+use AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header;
+use AlibabaCloud\SDK\OSS\OSS\PostObjectRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SwapFacialFeaturesRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SwapFacialFeaturesResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SwapFacialFeaturesAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\AddFaceEntityRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\AddFaceEntityResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceEntityRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceEntityResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceEntitiesRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceEntitiesResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\GetFaceEntityRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\GetFaceEntityResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\UpdateFaceEntityRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\UpdateFaceEntityResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceMakeupRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceMakeupResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceMakeupAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\HandPostureAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectPedestrianRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectPedestrianResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectPedestrianAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceBeautyRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceBeautyResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceBeautyAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceFilterRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceFilterResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceFilterAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\EnhanceFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\EnhanceFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\EnhanceFaceAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceTidyupRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceTidyupResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\FaceTidyupAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SearchFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SearchFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SearchFaceAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceDbsRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceDbsResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\CreateFaceDbRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\CreateFaceDbResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceDbRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DeleteFaceDbResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\AddFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\AddFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\AddFaceAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizePublicFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizePublicFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectLivingFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectLivingFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectBodyCountRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectBodyCountResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectBodyCountAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectMaskRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectMaskResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectMaskAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeFaceAdvanceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\CompareFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\CompareFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectFaceRequest;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectFaceResponse;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\DetectFaceAdvanceRequest;
+
+class Facebody extends Rpc {
+    public function __construct($config){
         parent::__construct($config);
-        $this->_endpointRule = 'regional';
+        $this->_endpointRule = "regional";
         $this->checkConfig($config);
         $this->_endpoint = $this->getEndpoint($this->_productId, $this->_regionId, $this->_endpointRule, $this->_network, $this->_suffix, $this->_endpointMap, $this->_endpoint);
     }
 
     /**
+     * @param DetectVideoLivingFaceRequest $request
+     * @param RuntimeOptions $runtime
+     * @return DetectVideoLivingFaceResponse
      * @throws \Exception
-     *
-     * @return AddFaceEntityResponse
      */
-    public function addFaceEntity(AddFaceEntityRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectVideoLivingFace(DetectVideoLivingFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('AddFaceEntity', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new AddFaceEntityResponse());
+        return DetectVideoLivingFaceResponse::fromMap($this->doRequest("DetectVideoLivingFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
+     * @param DetectVideoLivingFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
+     * @return DetectVideoLivingFaceResponse
      * @throws \Exception
-     *
-     * @return DeleteFaceEntityResponse
      */
-    public function deleteFaceEntity(DeleteFaceEntityRequest $request, RuntimeOptions $runtime)
-    {
-        Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DeleteFaceEntity', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new DeleteFaceEntityResponse());
-    }
-
-    /**
-     * @throws \Exception
-     *
-     * @return ListFaceEntitiesResponse
-     */
-    public function listFaceEntities(ListFaceEntitiesRequest $request, RuntimeOptions $runtime)
-    {
-        Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('ListFaceEntities', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new ListFaceEntitiesResponse());
-    }
-
-    /**
-     * @throws \Exception
-     *
-     * @return GetFaceEntityResponse
-     */
-    public function getFaceEntity(GetFaceEntityRequest $request, RuntimeOptions $runtime)
-    {
-        Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('GetFaceEntity', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new GetFaceEntityResponse());
-    }
-
-    /**
-     * @throws \Exception
-     *
-     * @return UpdateFaceEntityResponse
-     */
-    public function updateFaceEntity(UpdateFaceEntityRequest $request, RuntimeOptions $runtime)
-    {
-        Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('UpdateFaceEntity', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new UpdateFaceEntityResponse());
-    }
-
-    /**
-     * @throws \Exception
-     *
-     * @return FaceMakeupResponse
-     */
-    public function faceMakeup(FaceMakeupRequest $request, RuntimeOptions $runtime)
-    {
-        Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('FaceMakeup', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new FaceMakeupResponse());
-    }
-
-    /**
-     * @throws \Exception
-     *
-     * @return FaceMakeupResponse
-     */
-    public function faceMakeupAdvance(FaceMakeupAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectVideoLivingFaceAdvance(DetectVideoLivingFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->videoUrlObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
+        $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
+        RpcUtils::convert($runtime, $ossRuntime);
+        $ossClient->postObject($uploadRequest, $ossRuntime);
+        // Step 2: request final api
+        $detectVideoLivingFacereq = new DetectVideoLivingFaceRequest([]);
+        RpcUtils::convert($request, $detectVideoLivingFacereq);
+        $detectVideoLivingFacereq->videoUrl = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $detectVideoLivingFaceResp = $this->detectVideoLivingFace($detectVideoLivingFacereq, $runtime);
+        return $detectVideoLivingFaceResp;
+    }
+
+    /**
+     * @param SwapFacialFeaturesRequest $request
+     * @param RuntimeOptions $runtime
+     * @return SwapFacialFeaturesResponse
+     * @throws \Exception
+     */
+    public function swapFacialFeatures(SwapFacialFeaturesRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return SwapFacialFeaturesResponse::fromMap($this->doRequest("SwapFacialFeatures", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param SwapFacialFeaturesAdvanceRequest $request
+     * @param RuntimeOptions $runtime
+     * @return SwapFacialFeaturesResponse
+     * @throws \Exception
+     */
+    public function swapFacialFeaturesAdvance(SwapFacialFeaturesAdvanceRequest $request, RuntimeOptions $runtime){
+        // Step 0: init client
+        $accessKeyId = $this->_credential->getAccessKeyId();
+        $accessKeySecret = $this->_credential->getAccessKeySecret();
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
+        $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
+        // Step 1: request OSS api to upload file
+        $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $ossClient = new OSS($ossConfig);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->sourceImageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
+        $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
+        RpcUtils::convert($runtime, $ossRuntime);
+        $ossClient->postObject($uploadRequest, $ossRuntime);
+        // Step 2: request final api
+        $swapFacialFeaturesreq = new SwapFacialFeaturesRequest([]);
+        RpcUtils::convert($request, $swapFacialFeaturesreq);
+        $swapFacialFeaturesreq->sourceImageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $swapFacialFeaturesResp = $this->swapFacialFeatures($swapFacialFeaturesreq, $runtime);
+        return $swapFacialFeaturesResp;
+    }
+
+    /**
+     * @param AddFaceEntityRequest $request
+     * @param RuntimeOptions $runtime
+     * @return AddFaceEntityResponse
+     * @throws \Exception
+     */
+    public function addFaceEntity(AddFaceEntityRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return AddFaceEntityResponse::fromMap($this->doRequest("AddFaceEntity", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param DeleteFaceEntityRequest $request
+     * @param RuntimeOptions $runtime
+     * @return DeleteFaceEntityResponse
+     * @throws \Exception
+     */
+    public function deleteFaceEntity(DeleteFaceEntityRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return DeleteFaceEntityResponse::fromMap($this->doRequest("DeleteFaceEntity", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param ListFaceEntitiesRequest $request
+     * @param RuntimeOptions $runtime
+     * @return ListFaceEntitiesResponse
+     * @throws \Exception
+     */
+    public function listFaceEntities(ListFaceEntitiesRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return ListFaceEntitiesResponse::fromMap($this->doRequest("ListFaceEntities", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param GetFaceEntityRequest $request
+     * @param RuntimeOptions $runtime
+     * @return GetFaceEntityResponse
+     * @throws \Exception
+     */
+    public function getFaceEntity(GetFaceEntityRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return GetFaceEntityResponse::fromMap($this->doRequest("GetFaceEntity", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param UpdateFaceEntityRequest $request
+     * @param RuntimeOptions $runtime
+     * @return UpdateFaceEntityResponse
+     * @throws \Exception
+     */
+    public function updateFaceEntity(UpdateFaceEntityRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return UpdateFaceEntityResponse::fromMap($this->doRequest("UpdateFaceEntity", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param FaceMakeupRequest $request
+     * @param RuntimeOptions $runtime
+     * @return FaceMakeupResponse
+     * @throws \Exception
+     */
+    public function faceMakeup(FaceMakeupRequest $request, RuntimeOptions $runtime){
+        Utils::validateModel($request);
+        return FaceMakeupResponse::fromMap($this->doRequest("FaceMakeup", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
+    }
+
+    /**
+     * @param FaceMakeupAdvanceRequest $request
+     * @param RuntimeOptions $runtime
+     * @return FaceMakeupResponse
+     * @throws \Exception
+     */
+    public function faceMakeupAdvance(FaceMakeupAdvanceRequest $request, RuntimeOptions $runtime){
+        // Step 0: init client
+        $accessKeyId = $this->_credential->getAccessKeyId();
+        $accessKeySecret = $this->_credential->getAccessKeySecret();
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
+        $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
+        // Step 1: request OSS api to upload file
+        $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $ossClient = new OSS($ossConfig);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $faceMakeupreq = new FaceMakeupRequest([]);
         RpcUtils::convert($request, $faceMakeupreq);
-        $faceMakeupreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->faceMakeup($faceMakeupreq, $runtime);
+        $faceMakeupreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $faceMakeupResp = $this->faceMakeup($faceMakeupreq, $runtime);
+        return $faceMakeupResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param HandPostureRequest $request
+     * @param RuntimeOptions $runtime
      * @return HandPostureResponse
+     * @throws \Exception
      */
-    public function handPosture(HandPostureRequest $request, RuntimeOptions $runtime)
-    {
+    public function handPosture(HandPostureRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('HandPosture', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new HandPostureResponse());
+        return HandPostureResponse::fromMap($this->doRequest("HandPosture", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param HandPostureAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return HandPostureResponse
+     * @throws \Exception
      */
-    public function handPostureAdvance(HandPostureAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function handPostureAdvance(HandPostureAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $handPosturereq = new HandPostureRequest([]);
         RpcUtils::convert($request, $handPosturereq);
-        $handPosturereq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->handPosture($handPosturereq, $runtime);
+        $handPosturereq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $handPostureResp = $this->handPosture($handPosturereq, $runtime);
+        return $handPostureResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param BodyPostureRequest $request
+     * @param RuntimeOptions $runtime
      * @return BodyPostureResponse
+     * @throws \Exception
      */
-    public function bodyPosture(BodyPostureRequest $request, RuntimeOptions $runtime)
-    {
+    public function bodyPosture(BodyPostureRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('BodyPosture', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new BodyPostureResponse());
+        return BodyPostureResponse::fromMap($this->doRequest("BodyPosture", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param BodyPostureAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return BodyPostureResponse
+     * @throws \Exception
      */
-    public function bodyPostureAdvance(BodyPostureAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function bodyPostureAdvance(BodyPostureAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $bodyPosturereq = new BodyPostureRequest([]);
         RpcUtils::convert($request, $bodyPosturereq);
-        $bodyPosturereq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->bodyPosture($bodyPosturereq, $runtime);
+        $bodyPosturereq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $bodyPostureResp = $this->bodyPosture($bodyPosturereq, $runtime);
+        return $bodyPostureResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectPedestrianRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectPedestrianResponse
+     * @throws \Exception
      */
-    public function detectPedestrian(DetectPedestrianRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectPedestrian(DetectPedestrianRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DetectPedestrian', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new DetectPedestrianResponse());
+        return DetectPedestrianResponse::fromMap($this->doRequest("DetectPedestrian", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectPedestrianAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectPedestrianResponse
+     * @throws \Exception
      */
-    public function detectPedestrianAdvance(DetectPedestrianAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectPedestrianAdvance(DetectPedestrianAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $detectPedestrianreq = new DetectPedestrianRequest([]);
         RpcUtils::convert($request, $detectPedestrianreq);
-        $detectPedestrianreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->detectPedestrian($detectPedestrianreq, $runtime);
+        $detectPedestrianreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $detectPedestrianResp = $this->detectPedestrian($detectPedestrianreq, $runtime);
+        return $detectPedestrianResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceBeautyRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceBeautyResponse
+     * @throws \Exception
      */
-    public function faceBeauty(FaceBeautyRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceBeauty(FaceBeautyRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('FaceBeauty', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new FaceBeautyResponse());
+        return FaceBeautyResponse::fromMap($this->doRequest("FaceBeauty", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceBeautyAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceBeautyResponse
+     * @throws \Exception
      */
-    public function faceBeautyAdvance(FaceBeautyAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceBeautyAdvance(FaceBeautyAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $faceBeautyreq = new FaceBeautyRequest([]);
         RpcUtils::convert($request, $faceBeautyreq);
-        $faceBeautyreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->faceBeauty($faceBeautyreq, $runtime);
+        $faceBeautyreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $faceBeautyResp = $this->faceBeauty($faceBeautyreq, $runtime);
+        return $faceBeautyResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceFilterRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceFilterResponse
+     * @throws \Exception
      */
-    public function faceFilter(FaceFilterRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceFilter(FaceFilterRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('FaceFilter', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new FaceFilterResponse());
+        return FaceFilterResponse::fromMap($this->doRequest("FaceFilter", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceFilterAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceFilterResponse
+     * @throws \Exception
      */
-    public function faceFilterAdvance(FaceFilterAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceFilterAdvance(FaceFilterAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $faceFilterreq = new FaceFilterRequest([]);
         RpcUtils::convert($request, $faceFilterreq);
-        $faceFilterreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->faceFilter($faceFilterreq, $runtime);
+        $faceFilterreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $faceFilterResp = $this->faceFilter($faceFilterreq, $runtime);
+        return $faceFilterResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param EnhanceFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return EnhanceFaceResponse
+     * @throws \Exception
      */
-    public function enhanceFace(EnhanceFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function enhanceFace(EnhanceFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('EnhanceFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new EnhanceFaceResponse());
+        return EnhanceFaceResponse::fromMap($this->doRequest("EnhanceFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param EnhanceFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return EnhanceFaceResponse
+     * @throws \Exception
      */
-    public function enhanceFaceAdvance(EnhanceFaceAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function enhanceFaceAdvance(EnhanceFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $enhanceFacereq = new EnhanceFaceRequest([]);
         RpcUtils::convert($request, $enhanceFacereq);
-        $enhanceFacereq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->enhanceFace($enhanceFacereq, $runtime);
+        $enhanceFacereq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $enhanceFaceResp = $this->enhanceFace($enhanceFacereq, $runtime);
+        return $enhanceFaceResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceTidyupRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceTidyupResponse
+     * @throws \Exception
      */
-    public function faceTidyup(FaceTidyupRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceTidyup(FaceTidyupRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('FaceTidyup', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new FaceTidyupResponse());
+        return FaceTidyupResponse::fromMap($this->doRequest("FaceTidyup", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param FaceTidyupAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return FaceTidyupResponse
+     * @throws \Exception
      */
-    public function faceTidyupAdvance(FaceTidyupAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function faceTidyupAdvance(FaceTidyupAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $faceTidyupreq = new FaceTidyupRequest([]);
         RpcUtils::convert($request, $faceTidyupreq);
-        $faceTidyupreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->faceTidyup($faceTidyupreq, $runtime);
+        $faceTidyupreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $faceTidyupResp = $this->faceTidyup($faceTidyupreq, $runtime);
+        return $faceTidyupResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param SearchFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return SearchFaceResponse
+     * @throws \Exception
      */
-    public function searchFace(SearchFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function searchFace(SearchFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('SearchFace', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new SearchFaceResponse());
+        return SearchFaceResponse::fromMap($this->doRequest("SearchFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param SearchFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return SearchFaceResponse
+     * @throws \Exception
      */
-    public function searchFaceAdvance(SearchFaceAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function searchFaceAdvance(SearchFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageUrlObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageUrlObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $searchFacereq = new SearchFaceRequest([]);
         RpcUtils::convert($request, $searchFacereq);
-        $searchFacereq->imageUrl = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->searchFace($searchFacereq, $runtime);
+        $searchFacereq->imageUrl = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $searchFaceResp = $this->searchFace($searchFacereq, $runtime);
+        return $searchFaceResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param ListFaceDbsRequest $request
+     * @param RuntimeOptions $runtime
      * @return ListFaceDbsResponse
+     * @throws \Exception
      */
-    public function listFaceDbs(ListFaceDbsRequest $request, RuntimeOptions $runtime)
-    {
+    public function listFaceDbs(ListFaceDbsRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('ListFaceDbs', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new ListFaceDbsResponse());
+        return ListFaceDbsResponse::fromMap($this->doRequest("ListFaceDbs", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param CreateFaceDbRequest $request
+     * @param RuntimeOptions $runtime
      * @return CreateFaceDbResponse
+     * @throws \Exception
      */
-    public function createFaceDb(CreateFaceDbRequest $request, RuntimeOptions $runtime)
-    {
+    public function createFaceDb(CreateFaceDbRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('CreateFaceDb', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new CreateFaceDbResponse());
+        return CreateFaceDbResponse::fromMap($this->doRequest("CreateFaceDb", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DeleteFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DeleteFaceResponse
+     * @throws \Exception
      */
-    public function deleteFace(DeleteFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function deleteFace(DeleteFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DeleteFace', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new DeleteFaceResponse());
+        return DeleteFaceResponse::fromMap($this->doRequest("DeleteFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DeleteFaceDbRequest $request
+     * @param RuntimeOptions $runtime
      * @return DeleteFaceDbResponse
+     * @throws \Exception
      */
-    public function deleteFaceDb(DeleteFaceDbRequest $request, RuntimeOptions $runtime)
-    {
+    public function deleteFaceDb(DeleteFaceDbRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DeleteFaceDb', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new DeleteFaceDbResponse());
+        return DeleteFaceDbResponse::fromMap($this->doRequest("DeleteFaceDb", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param AddFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return AddFaceResponse
+     * @throws \Exception
      */
-    public function addFace(AddFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function addFace(AddFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('AddFace', 'HTTPS', 'GET', '2019-12-30', 'AK', null, $request, $runtime), new AddFaceResponse());
+        return AddFaceResponse::fromMap($this->doRequest("AddFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param AddFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return AddFaceResponse
+     * @throws \Exception
      */
-    public function addFaceAdvance(AddFaceAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function addFaceAdvance(AddFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageUrlObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageUrlObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $addFacereq = new AddFaceRequest([]);
         RpcUtils::convert($request, $addFacereq);
-        $addFacereq->imageUrl = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->addFace($addFacereq, $runtime);
+        $addFacereq->imageUrl = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $addFaceResp = $this->addFace($addFacereq, $runtime);
+        return $addFaceResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param RecognizeExpressionRequest $request
+     * @param RuntimeOptions $runtime
      * @return RecognizeExpressionResponse
+     * @throws \Exception
      */
-    public function recognizeExpression(RecognizeExpressionRequest $request, RuntimeOptions $runtime)
-    {
+    public function recognizeExpression(RecognizeExpressionRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('RecognizeExpression', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new RecognizeExpressionResponse());
+        return RecognizeExpressionResponse::fromMap($this->doRequest("RecognizeExpression", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param RecognizeExpressionAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return RecognizeExpressionResponse
+     * @throws \Exception
      */
-    public function recognizeExpressionAdvance(RecognizeExpressionAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function recognizeExpressionAdvance(RecognizeExpressionAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $recognizeExpressionreq = new RecognizeExpressionRequest([]);
         RpcUtils::convert($request, $recognizeExpressionreq);
-        $recognizeExpressionreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->recognizeExpression($recognizeExpressionreq, $runtime);
+        $recognizeExpressionreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $recognizeExpressionResp = $this->recognizeExpression($recognizeExpressionreq, $runtime);
+        return $recognizeExpressionResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param RecognizePublicFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return RecognizePublicFaceResponse
+     * @throws \Exception
      */
-    public function recognizePublicFace(RecognizePublicFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function recognizePublicFace(RecognizePublicFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('RecognizePublicFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new RecognizePublicFaceResponse());
+        return RecognizePublicFaceResponse::fromMap($this->doRequest("RecognizePublicFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectLivingFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectLivingFaceResponse
+     * @throws \Exception
      */
-    public function detectLivingFace(DetectLivingFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectLivingFace(DetectLivingFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DetectLivingFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new DetectLivingFaceResponse());
+        return DetectLivingFaceResponse::fromMap($this->doRequest("DetectLivingFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectBodyCountRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectBodyCountResponse
+     * @throws \Exception
      */
-    public function detectBodyCount(DetectBodyCountRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectBodyCount(DetectBodyCountRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DetectBodyCount', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new DetectBodyCountResponse());
+        return DetectBodyCountResponse::fromMap($this->doRequest("DetectBodyCount", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectBodyCountAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectBodyCountResponse
+     * @throws \Exception
      */
-    public function detectBodyCountAdvance(DetectBodyCountAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectBodyCountAdvance(DetectBodyCountAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $detectBodyCountreq = new DetectBodyCountRequest([]);
         RpcUtils::convert($request, $detectBodyCountreq);
-        $detectBodyCountreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->detectBodyCount($detectBodyCountreq, $runtime);
+        $detectBodyCountreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $detectBodyCountResp = $this->detectBodyCount($detectBodyCountreq, $runtime);
+        return $detectBodyCountResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectMaskRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectMaskResponse
+     * @throws \Exception
      */
-    public function detectMask(DetectMaskRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectMask(DetectMaskRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DetectMask', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new DetectMaskResponse());
+        return DetectMaskResponse::fromMap($this->doRequest("DetectMask", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectMaskAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectMaskResponse
+     * @throws \Exception
      */
-    public function detectMaskAdvance(DetectMaskAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectMaskAdvance(DetectMaskAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $detectMaskreq = new DetectMaskRequest([]);
         RpcUtils::convert($request, $detectMaskreq);
-        $detectMaskreq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->detectMask($detectMaskreq, $runtime);
+        $detectMaskreq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $detectMaskResp = $this->detectMask($detectMaskreq, $runtime);
+        return $detectMaskResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param RecognizeFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return RecognizeFaceResponse
+     * @throws \Exception
      */
-    public function recognizeFace(RecognizeFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function recognizeFace(RecognizeFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('RecognizeFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new RecognizeFaceResponse());
+        return RecognizeFaceResponse::fromMap($this->doRequest("RecognizeFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param RecognizeFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return RecognizeFaceResponse
+     * @throws \Exception
      */
-    public function recognizeFaceAdvance(RecognizeFaceAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function recognizeFaceAdvance(RecognizeFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $recognizeFacereq = new RecognizeFaceRequest([]);
         RpcUtils::convert($request, $recognizeFacereq);
-        $recognizeFacereq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->recognizeFace($recognizeFacereq, $runtime);
+        $recognizeFacereq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $recognizeFaceResp = $this->recognizeFace($recognizeFacereq, $runtime);
+        return $recognizeFaceResp;
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param CompareFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return CompareFaceResponse
+     * @throws \Exception
      */
-    public function compareFace(CompareFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function compareFace(CompareFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('CompareFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new CompareFaceResponse());
+        return CompareFaceResponse::fromMap($this->doRequest("CompareFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectFaceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectFaceResponse
+     * @throws \Exception
      */
-    public function detectFace(DetectFaceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectFace(DetectFaceRequest $request, RuntimeOptions $runtime){
         Utils::validateModel($request);
-
-        return Model::toModel($this->doRequest('DetectFace', 'HTTPS', 'POST', '2019-12-30', 'AK', null, $request, $runtime), new DetectFaceResponse());
+        return DetectFaceResponse::fromMap($this->doRequest("DetectFace", "HTTPS", "POST", "2019-12-30", "AK", null, $request, $runtime));
     }
 
     /**
-     * @throws \Exception
-     *
+     * @param DetectFaceAdvanceRequest $request
+     * @param RuntimeOptions $runtime
      * @return DetectFaceResponse
+     * @throws \Exception
      */
-    public function detectFaceAdvance(DetectFaceAdvanceRequest $request, RuntimeOptions $runtime)
-    {
+    public function detectFaceAdvance(DetectFaceAdvanceRequest $request, RuntimeOptions $runtime){
         // Step 0: init client
-        $accessKeyId     = $this->_credential->getAccessKeyId();
+        $accessKeyId = $this->_credential->getAccessKeyId();
         $accessKeySecret = $this->_credential->getAccessKeySecret();
-        $authConfig      = new \AlibabaCloud\Tea\Rpc\Rpc\Config([
-            'accessKeyId'     => $accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => 'openplatform.aliyuncs.com',
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
-        $authClient  = new OpenPlatform($authConfig);
-        $authRequest = new \AlibabaCloud\SDK\OpenPlatform\V20191219\OpenPlatform\AuthorizeFileUploadRequest([
-            'product'  => 'facebody',
-            'regionId' => $this->_regionId,
-        ]);
+        $authConfig = new Config([
+            "accessKeyId" => $accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => "openplatform.aliyuncs.com",
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
+        $authClient = new OpenPlatform($authConfig);
+        $authRequest = new AuthorizeFileUploadRequest([
+            "product" => "facebody",
+            "regionId" => $this->_regionId
+            ]);
         $authResponse = $authClient->authorizeFileUpload($authRequest, $runtime);
         // Step 1: request OSS api to upload file
         $ossConfig = new \AlibabaCloud\SDK\OSS\OSS\Config([
-            'accessKeyId'     => $authResponse->accessKeyId,
-            'accessKeySecret' => $accessKeySecret,
-            'type'            => 'access_key',
-            'endpoint'        => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
-            'protocol'        => $this->_protocol,
-            'regionId'        => $this->_regionId,
-        ]);
+            "accessKeyId" => $authResponse->accessKeyId,
+            "accessKeySecret" => $accessKeySecret,
+            "type" => "access_key",
+            "endpoint" => RpcUtils::getEndpoint($authResponse->endpoint, $authResponse->useAccelerate, $this->_endpointType),
+            "protocol" => $this->_protocol,
+            "regionId" => $this->_regionId
+            ]);
         $ossClient = new OSS($ossConfig);
-        $fileObj   = new \AlibabaCloud\Tea\FileForm\FileForm\FileField([
-            'filename'    => $authResponse->objectKey,
-            'content'     => $request->imageURLObject,
-            'contentType' => '',
-        ]);
-        $ossHeader = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest\header([
-            'accessKeyId'         => $authResponse->accessKeyId,
-            'policy'              => $authResponse->encodedPolicy,
-            'signature'           => $authResponse->signature,
-            'key'                 => $authResponse->objectKey,
-            'file'                => $fileObj,
-            'successActionStatus' => '201',
-        ]);
-        $uploadRequest = new \AlibabaCloud\SDK\OSS\OSS\PostObjectRequest([
-            'bucketName' => $authResponse->bucket,
-            'header'     => $ossHeader,
-        ]);
+        $fileObj = new FileField([
+            "filename" => $authResponse->objectKey,
+            "content" => $request->imageURLObject,
+            "contentType" => ""
+            ]);
+        $ossHeader = new header([
+            "accessKeyId" => $authResponse->accessKeyId,
+            "policy" => $authResponse->encodedPolicy,
+            "signature" => $authResponse->signature,
+            "key" => $authResponse->objectKey,
+            "file" => $fileObj,
+            "successActionStatus" => "201"
+            ]);
+        $uploadRequest = new PostObjectRequest([
+            "bucketName" => $authResponse->bucket,
+            "header" => $ossHeader
+            ]);
         $ossRuntime = new \AlibabaCloud\Tea\OSSUtils\OSSUtils\RuntimeOptions([]);
         RpcUtils::convert($runtime, $ossRuntime);
         $ossClient->postObject($uploadRequest, $ossRuntime);
         // Step 2: request final api
         $detectFacereq = new DetectFaceRequest([]);
         RpcUtils::convert($request, $detectFacereq);
-        $detectFacereq->imageURL = 'http://' . $authResponse->bucket . '.' . $authResponse->endpoint . '/' . $authResponse->objectKey . '';
-
-        return $this->detectFace($detectFacereq, $runtime);
+        $detectFacereq->imageURL = "http://" . $authResponse->bucket . "." . $authResponse->endpoint . "/" . $authResponse->objectKey . "";
+        $detectFaceResp = $this->detectFace($detectFacereq, $runtime);
+        return $detectFaceResp;
     }
 
     /**
@@ -1352,22 +1479,18 @@ class Facebody
      * @param string $endpointRule
      * @param string $network
      * @param string $suffix
-     * @param array  $endpointMap
+     * @param array $endpointMap
      * @param string $endpoint
-     *
-     * @throws \Exception
-     *
      * @return string
+     * @throws \Exception
      */
-    public function getEndpoint($productId, $regionId, $endpointRule, $network, $suffix, $endpointMap, $endpoint)
-    {
+    public function getEndpoint($productId, $regionId, $endpointRule, $network, $suffix, $endpointMap, $endpoint){
         if (!Utils::empty_($endpoint)) {
             return $endpoint;
         }
-        if (!Utils::empty_($endpointMap['regionId'])) {
-            return $endpointMap['regionId'];
+        if (!Utils::isUnset($endpointMap) && !Utils::empty_($endpointMap["regionId"])) {
+            return $endpointMap["regionId"];
         }
-
         return Endpoint::getEndpointRules($productId, $regionId, $endpointRule, $network, $suffix);
     }
 }

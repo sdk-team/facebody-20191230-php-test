@@ -1,11 +1,11 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\RecognizeExpressionResponse\data;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionResponse\data;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\elements\faceRectangle;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionResponse\data\elements\faceRectangle;
 
 class elements extends Model {
     protected $_name = [
@@ -56,7 +56,7 @@ class elements extends Model {
 
     /**
      * @description faceRectangle
-     * @var elements.faceRectangle
+     * @var faceRectangle
      */
     public $faceRectangle;
 

@@ -1,11 +1,11 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\SwapFacialFeaturesResponse\data;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\SwapFacialFeaturesResponse\data;
 
 class SwapFacialFeaturesResponse extends Model {
     protected $_name = [
@@ -44,7 +44,7 @@ class SwapFacialFeaturesResponse extends Model {
 
     /**
      * @description data
-     * @var SwapFacialFeaturesResponse.data
+     * @var data
      */
     public $data;
 

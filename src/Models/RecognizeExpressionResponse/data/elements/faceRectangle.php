@@ -1,7 +1,7 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\RecognizeExpressionResponse\data\elements;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\RecognizeExpressionResponse\data\elements;
 
 use AlibabaCloud\Tea\Model;
 

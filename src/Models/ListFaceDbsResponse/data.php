@@ -1,11 +1,11 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\ListFaceDbsResponse;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceDbsResponse;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\ListFaceDbsResponse\data\dbList;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\ListFaceDbsResponse\data\dbList;
 
 class data extends Model {
     protected $_name = [

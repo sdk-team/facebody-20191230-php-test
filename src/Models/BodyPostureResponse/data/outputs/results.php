@@ -1,11 +1,11 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\BodyPostureResponse\data\outputs;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse\data\outputs;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\BodyPostureResponse\data\outputs\results\bodies;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse\data\outputs\results\bodies;
 
 class results extends Model {
     protected $_name = [

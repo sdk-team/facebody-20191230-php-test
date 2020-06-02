@@ -1,12 +1,12 @@
 <?php
 
 // This file is auto-generated, don't edit it. Thanks.
-namespace AlibabaCloud\SDK\facebody\V20191230\Models\BodyPostureResponse;
+namespace AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse;
 
 use AlibabaCloud\Tea\Model;
 
-use AlibabaCloud\SDK\facebody\V20191230\Models\data\metaObject;
-use AlibabaCloud\SDK\facebody\V20191230\Models\BodyPostureResponse\data\outputs;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse\data\outputs;
+use AlibabaCloud\SDK\Facebody\V20191230\Models\BodyPostureResponse\data\metaObject;
 
 class data extends Model {
     protected $_name = [
@@ -57,7 +57,7 @@ class data extends Model {
 
     /**
      * @description meta
-     * @var data.metaObject
+     * @var metaObject
      */
     public $metaObject;
 
